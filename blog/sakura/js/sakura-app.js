@@ -104,21 +104,25 @@ function post_list_show_animation() {
     }
 }
 mashiro_global.font_control = new function () {
+    // this.change_font = function () {
+    //     if ($("body").hasClass("serif")) {
+    //         $("body").removeClass("serif");
+    //         $(".control-btn-serif").removeClass("selected");
+    //         $(".control-btn-sans-serif").addClass("selected");
+    //         setCookie("font_family", "sans-serif", 30);
+    //     } else {
+    //         $("body").addClass("serif");
+    //         $(".control-btn-serif").addClass("selected");
+    //         $(".control-btn-sans-serif").removeClass("selected");
+    //         setCookie("font_family", "serif", 30);
+    //         if (document.body.clientWidth <= 860) {
+    //             addComment.createButterbar("将从网络加载字体，流量请注意");
+    //         }
+    //     }
+    // }
     this.change_font = function () {
-        if ($("body").hasClass("serif")) {
-            $("body").removeClass("serif");
-            $(".control-btn-serif").removeClass("selected");
-            $(".control-btn-sans-serif").addClass("selected");
-            setCookie("font_family", "sans-serif", 30);
-        } else {
-            $("body").addClass("serif");
-            $(".control-btn-serif").addClass("selected");
-            $(".control-btn-sans-serif").removeClass("selected");
-            setCookie("font_family", "serif", 30);
-            if (document.body.clientWidth <= 860) {
-                addComment.createButterbar("将从网络加载字体，流量请注意");
-            }
-        }
+        $(".control-btn-serif").addClass("selected");
+        $(".control-btn-sans-serif").removeClass("selected");
     }
     this.ini = function () {
         if (document.body.clientWidth > 860) {
@@ -1072,8 +1076,7 @@ loadCSS(mashiro_option.jsdelivr_css_src);
 loadCSS(mashiro_option.entry_content_theme_src);
 loadCSS("https://at.alicdn.com/t/font_679578_qyt5qzzavdo39pb9.css");
 loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css");
-//loadCSS("https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC");
-loadCSS("https://cdn.loganren.xyz/blog/sakura/css/font.css");
+loadCSS("https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC");
 (function webpackUniversalModuleDefinition(b, a) {
     if (typeof exports === "object" && typeof module === "object") {
         module.exports = a()
